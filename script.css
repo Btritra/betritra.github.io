@@ -1,0 +1,146 @@
+#extra{
+    position: relative;
+    z-index: 1010; /* Asegura que el div quede por encima de otros elementos */
+}
+
+img{
+    z-index: 1000; /* Asegura que la imagen quede por encima de otros elementos */
+    background: radial-gradient(270px,#7ae2a2,#00000000);
+    display: none;
+}
+
+#fondo{
+    position: fixed;
+    top: 0px;
+    right: 8px;
+    width: 1010px; /*define el tamaño de l aimagen*/
+    display: block;
+}
+
+#primerEdi {
+    position: fixed;
+    top: 380px;
+    right: 420px;
+    width: 25px; /*define el tamaño de l aimagen*/
+
+}
+
+#segundoEdi {
+    position: fixed;
+    top: 292px;
+    right: 420px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#tercerEdi {
+    position: fixed;
+    top: 380px;
+    right: 367px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#cuartoEdi {
+    position: fixed;
+    top: 292px;
+    right: 367px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#quintoEdi {
+    position: fixed;
+    top: 380px;
+    right: 311px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#sextoEdi {
+    position: fixed;
+    top: 292px;
+    right: 311px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#sectimoEdi {
+    position: fixed;
+    top: 380px;
+    right: 260px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#octavoEdi {
+    position: fixed;
+    top: 292px;
+    right: 260px;
+    width: 25px; /*define el tamaño de l aimagen*/
+}
+
+#computo{
+    position: fixed;
+    top: 285px;
+    right: 48px;
+    width: 43px;
+}
+
+#ediMecanica{
+    position: fixed;
+    top: 285px;
+    right: 95px;
+    width: 140px;
+}
+
+#ediQuimica{
+    position: fixed;
+    top: 255px;
+    right: 365px;
+    width: 80px;
+}
+
+#ediQuimica2{
+    position: fixed;
+    top: 255px;
+    right: 260px;
+    width: 80px;
+}
+
+#auditorio{
+    position: fixed;
+    top: 44px;
+    right: 92px;
+    width: 62px;
+}
+
+#biblioteca{
+    position: fixed;
+    top: 132px;
+    right: 227px;
+    width: 53px;
+}
+
+#departamentoComputo{
+    position: fixed;
+    top: 213px;
+    right: 590px;
+    width: 43px;
+}
+
+#postgrados{
+    position: fixed;
+    top: 82px;
+    right: 188px;
+    width: 65px;
+}
+
+#postgrados2{
+    position: fixed;
+    top: 34px;
+    right: 184px;
+    width: 84px;
+}
+
+#postgrados3{
+    position: fixed;
+    top: 34px;
+    right: 321px;
+    width: 20px;
+}
+
