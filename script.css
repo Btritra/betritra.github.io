@@ -1,150 +1,92 @@
-#extra{
+/* RESET GENERAL */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll */
+    font-family: sans-serif;
+}
+/* CONTENEDOR PRINCIPAL DEL MAPA */
+#mapaContainer {
     position: relative;
-    z-index: 1010; /* Asegura que el div quede por encima de otros elementos */
+    width: 1024px;        /* Tamaño fijo del mapa */
+    height: auto;
+    margin: 0 auto;
 }
 
-body {
-    overflow: hidden;
-}
-
-img{
-    z-index: 1000; /* Asegura que la imagen quede por encima de otros elementos */
-    background: radial-gradient(270px,#7ae2a2,#00000000);
-    display: none;
-}
-
-#fondo{
-    position: fixed;
-    top: 0px;
-    right: 8px;
-    width: 1010px; /*define el tamaño de l aimagen*/
+/* FONDO - SIEMPRE DETRÁS */
+#fondo {
+    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
+    z-index: 0; /* Fondo detrás */
 }
 
-#primerEdi {
-    position: fixed;
-    top: 380px;
-    right: 420px;
-    width: 25px; /*define el tamaño de l aimagen*/
-
+/* TODAS LAS IMÁGENES DEL MAPA */
+#mapaContainer img {
+    position: absolute;
+    display: block;
+    max-width: none; /* Para evitar escalado automático */
 }
 
-#segundoEdi {
-    position: fixed;
-    top: 292px;
-    right: 420px;
-    width: 25px; /*define el tamaño de l aimagen*/
+/* EDIFICIOS Y ELEMENTOS - ENCIMA DEL FONDO */
+#primerEdi,
+#segundoEdi,
+#tercerEdi,
+#cuartoEdi,
+#quintoEdi,
+#sextoEdi,
+#sectimoEdi,
+#octavoEdi,
+#computo,
+#ediMecanica,
+#ediQuimica,
+#ediQuimica2,
+#auditorio,
+#biblioteca,
+#departamentoComputo,
+#postgrados,
+#postgrados2,
+#postgrados3 {
+    z-index: 10; /* Encima del fondo */
+    width: 25px; /* Puedes ajustar cada uno si es necesario */
 }
 
-#tercerEdi {
-    position: fixed;
-    top: 380px;
-    right: 367px;
-    width: 25px; /*define el tamaño de l aimagen*/
+/* POSICIONES DE CADA EDIFICIO */
+#primerEdi { top: 386px; right: 418px; }
+#segundoEdi { top: 298px; right: 418px; }
+#tercerEdi { top: 386px; right: 365px; }
+#cuartoEdi { top: 298px; right: 365px; }
+#quintoEdi { top: 386px; right: 309px; }
+#sextoEdi { top: 298px; right: 309px; }
+#sectimoEdi { top: 386px; right: 256px; }
+#octavoEdi { top: 298px; right: 256px; }
+
+#computo { top: 290px; right: 40px; width: 43px; }
+#ediMecanica { top: 290px; right: 90px; width: 140px; }
+#ediQuimica { top: 257px; right: 365px; width: 80px; }
+#ediQuimica2 { top: 257px; right: 255px; width: 80px; }
+#auditorio { top: 46px; right: 85px; width: 62px; }
+#biblioteca { top: 135px; right: 222px; width: 53px; }
+#departamentoComputo { top: 218px; right: 593px; width: 43px; }
+#postgrados { top: 84px; right: 184px; width: 65px; }
+#postgrados2 { top: 36px; right: 178px; width: 84px; }
+#postgrados3 { top: 36px; right: 316px; width: 21px; }
+
+/* CLASE PARA OCULTAR EDIFICIOS INICIALMENTE */
+.oculto {
+    z-index: 10;
+    background: radial-gradient(270px, #7ae2a2, #00000000);
 }
 
-#cuartoEdi {
-    position: fixed;
-    top: 292px;
-    right: 367px;
-    width: 25px; /*define el tamaño de l aimagen*/
+/* DIV DEL FORMULARIO (INPUTS) */
+#extra {
+    position: relative;
+    z-index: 20; /* Por encima de todo */
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1em;
+    max-width: 1024px;
+    margin: 0 auto;
 }
-
-#quintoEdi {
-    position: fixed;
-    top: 380px;
-    right: 311px;
-    width: 25px; /*define el tamaño de l aimagen*/
-}
-
-#sextoEdi {
-    position: fixed;
-    top: 292px;
-    right: 311px;
-    width: 25px; /*define el tamaño de l aimagen*/
-}
-
-#sectimoEdi {
-    position: fixed;
-    top: 380px;
-    right: 260px;
-    width: 25px; /*define el tamaño de l aimagen*/
-}
-
-#octavoEdi {
-    position: fixed;
-    top: 292px;
-    right: 260px;
-    width: 25px; /*define el tamaño de l aimagen*/
-}
-
-#computo{
-    position: fixed;
-    top: 285px;
-    right: 48px;
-    width: 43px;
-}
-
-#ediMecanica{
-    position: fixed;
-    top: 285px;
-    right: 95px;
-    width: 140px;
-}
-
-#ediQuimica{
-    position: fixed;
-    top: 255px;
-    right: 365px;
-    width: 80px;
-}
-
-#ediQuimica2{
-    position: fixed;
-    top: 255px;
-    right: 260px;
-    width: 80px;
-}
-
-#auditorio{
-    position: fixed;
-    top: 44px;
-    right: 92px;
-    width: 62px;
-}
-
-#biblioteca{
-    position: fixed;
-    top: 132px;
-    right: 227px;
-    width: 53px;
-}
-
-#departamentoComputo{
-    position: fixed;
-    top: 213px;
-    right: 590px;
-    width: 43px;
-}
-
-#postgrados{
-    position: fixed;
-    top: 82px;
-    right: 188px;
-    width: 65px;
-}
-
-#postgrados2{
-    position: fixed;
-    top: 34px;
-    right: 184px;
-    width: 84px;
-}
-
-#postgrados3{
-    position: fixed;
-    top: 34px;
-    right: 321px;
-    width: 20px;
-}
-
