@@ -3,6 +3,10 @@
     z-index: 1010; /* Asegura que el div quede por encima de otros elementos */
 }
 
+body {
+    overflow: hidden;
+}
+
 img{
     z-index: 1000; /* Asegura que la imagen quede por encima de otros elementos */
     background: radial-gradient(270px,#7ae2a2,#00000000);
