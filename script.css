@@ -78,7 +78,7 @@ html, body {
 /* CLASE PARA OCULTAR EDIFICIOS INICIALMENTE */
 .oculto {
     z-index: 10;
-    background: radial-gradient(270px, #7ae2a2, #00000000);
+    background: radial-gradient(270px, #751ee0, #864d9700);
 }
 
 /* DIV DEL FORMULARIO (INPUTS) */
